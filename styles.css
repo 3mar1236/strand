@@ -1,6 +1,9 @@
+html{
+    background-color: beige;
+}
+
 #root{
     width: 100vw;
-    background-color: beige;
     border: solid 2px transparent;
     display: flex;
     justify-content: center;

@@ -23,7 +23,7 @@ hr{
 
 
 svg{
-    scale: 0.2;
+   
     position: fixed;
     padding: 1rem;
     border: solid red 2px;
@@ -36,6 +36,7 @@ svg{
     background-color: bisque;
     border-radius: 50rem;
     transform: rotate(0deg);
+     scale: 0.5;
     transition: 2.5s ease-in-out;
 }
 

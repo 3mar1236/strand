@@ -1,0 +1,77 @@
+#root{
+    width: 100vw;
+    height: 200vh;
+    background: linear-gradient( rgb(252, 252, 111), rgb(255, 181, 181));
+    border: solid 2px transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.blank_space_baby{
+    min-height: 200vh;
+    width: 100vw;
+    background: linear-gradient( rgb(255, 181, 181),  rgb(252, 252, 111));
+
+}
+
+hr{
+    position: absolute;
+    width: 10rem;
+    border: solid 5px red;
+    top: 710px;
+}
+
+
+svg{
+    position: fixed;
+    padding: 1rem;
+    border: solid red 2px;
+    margin-inline: auto;
+    width: 17rem;
+    transform-origin: 80% center ;
+    --rotation: 0deg;
+    /* transform: rotate(var(--rotation)); */
+    
+    background-color: bisque;
+    border-radius: 50rem;
+    transform: rotate(0deg);
+    transition: 2.5s ease-in-out;
+}
+
+svg.twist{
+    transform: rotate(90deg);
+    translate: -15rem 0.75rem;
+
+}
+
+.left-dna{
+
+    /* stroke: rgb(255, 123, 0); */
+    stroke: orange;
+    stroke-dashoffset: -120;
+    stroke-dasharray: 17 18 17 1000;
+    transition: 1s ease-in-out;
+    
+}
+.right-dna{
+    /* stroke: orange; */
+    stroke: rgb(255, 123, 0);
+    stroke-dashoffset: -120;
+    /* stroke-dasharray: 60 1000; */
+    stroke-dasharray: 52 1000;
+    transition: 1s ease-in-out;
+}
+
+
+svg.twist> .left-dna{
+    transition: 3s ease-in-out;
+    stroke-dasharray: 60 0 340;
+    /* stroke-dasharray: 40 0 340; */
+    stroke-dashoffset: 0;
+}
+
+svg.twist > .right-dna{
+    transition: 3s ease-in-out;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 0;
+} 

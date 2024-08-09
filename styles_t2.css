@@ -23,6 +23,7 @@ hr{
 
 
 svg{
+    scale: 0.2;
     position: fixed;
     padding: 1rem;
     border: solid red 2px;

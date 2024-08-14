@@ -1,6 +1,6 @@
 :root{
     --color: #c777ff;
-    --linespeed: 1.5s;
+    --linespeed: 2.25s;
 }
 
 html{
@@ -12,10 +12,11 @@ body{
     flex-direction: center;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 svg{
-    width: 1000px;
+    height: 70vh;
     /* border: red 2px solid; */
 }
 
@@ -146,5 +147,5 @@ svg{
 }
 svg:hover{
     rotate: 90deg;
-    transition: 1.5s ease-in-out 500ms;
+    transition: 2s ease-in-out 1000ms;
 }

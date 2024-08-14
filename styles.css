@@ -1,72 +1,150 @@
+:root{
+    --color: #c777ff;
+    --linespeed: 1.5s;
+}
+
 html{
     background-color: beige;
 }
 
-#root{
-    width: 100vw;
-    border: solid 2px transparent;
+body{
     display: flex;
+    flex-direction: center;
     justify-content: center;
+    align-items: center;
 }
 
 svg{
-    padding: 1rem;
-    /* border: solid red 2px; */
-    margin-inline: auto;
-    width: 17rem;
-    transform-origin: center center ;
-    transform: rotate(0deg);
-    transition: 2.5s 500ms ease-in-out;
+    width: 1000px;
+    /* border: red 2px solid; */
 }
 
-svg.twist{
-    transform: rotate(90deg);
-    translate: -5rem -18rem;
 
-}
+.linetes-bot{
+    /* stroke: greenyellow; */
+    stroke-dashoffset: -370;
+    /* stroke-dashoffset: -40; */
+    stroke-width: 0;
+    stroke-dasharray: 0 500;
+    
+    /* temporary or testing idk */
+    transition: 0.75s linear;
 
-.left-dna{
-
-    stroke: rgb(255, 123, 0);
-    stroke-dashoffset: -40;
-    stroke-dasharray: 25 10 25 1000;
-    transition: 1s ease-in-out;
-
-    /* stroke-dasharray: 62 1000; */
-
-    /* transition: 3s ease-in-out; */
     
 }
 
-.right-dna{
-    stroke: orange;
-    stroke-dashoffset: -40;
-    /* stroke-dasharray: 25 12 25 1000; */
-    stroke-dasharray: 60 1000;
-    transition: 1s ease-in-out;
+svg:hover .linetes-bot{
 
-    /* transition: 4s ease-in-out; */
+    transition: stroke-dasharray var(--linespeed) ease-in-out, stroke-dashoffset var(--linespeed) ease-in-out;
+
+    stroke-width: 13.0538;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 700;
+}
+
+.linetes-top{
+    /* stroke: purple; */
+    /* stroke-dashoffset: -250; */
+    stroke-width: 0;
+    stroke-dashoffset: 20;
+    stroke-dasharray: 0 5000;
+
+     /* temporary or testing idk */
+     transition: 0.75s linear;
+    
+}
+
+svg:hover .linetes-top{
+
+    transition: stroke-dasharray var(--linespeed) ease-in-out, stroke-dashoffset var(--linespeed) ease-in-out;
+
+
+    stroke-width: 13.0538;
+    stroke-dasharray: 700;
+}
+
+/* qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm */
+
+
+.top-h{
+    opacity: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+svg:hover .top-h{
+    stroke-width: 25.1;
+    opacity: 0%;
+
+}
+
+
+.bot-h{
+    opacity: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+svg:hover .bot-h{
+    stroke-width: 25.1;
+    opacity: 0%;
+
 }
 
 
 
-/* svg:hover > .left-dna{
-    stroke-dasharray: 300 1000;
-    stroke-dashoffset: 0;
+.top-h-line{    
+    opacity: 100%;
+    transition: 0.15s ease-in-out;
+}
+svg:hover .top-h-line{
+    opacity: 0;
+}
+.bot-h-line{    
+    opacity: 100%;
+    transition: 0.15s ease-in-out;
 }
 
-svg:hover > .right-dna{
-    stroke-dasharray: 45 0 300 1000;
-    stroke-dashoffset: 0;
-} */
-svg.twist> .left-dna{
-    transition: 3s ease-in-out;
-    stroke-dasharray: 40 0 240;
-    stroke-dashoffset: 0;
+svg:hover .bot-h-line{
+    opacity: 0;
 }
 
-svg.twist > .right-dna{
-    transition: 3s ease-in-out;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 0;
+.h-connect{
+    stroke-dashoffset: 75;
+    stroke-dasharray: 525;
+    stroke-width: 24;
+    transition: 0.1s ease-in-out;
+}
+
+svg:hover .h-connect{
+    stroke-dasharray: 0 500;
+}
+
+
+.hcon{
+    opacity: 0;
+}
+
+svg:hover .hcon{
+    opacity: 100%;
+}
+
+
+.rest-of-logo{
+    opacity: 100%;
+    transition: 1s ease-in-out 700ms;
+}
+svg:hover .rest-of-logo{
+    transition: 0.5s ease-in-out;
+    opacity: 0%;
+}
+
+
+svg{
+    rotate: 0deg;
+    transform-origin: center 131;
+    transition: 1.5s ease-in-out;
+    
+}
+svg:hover{
+    rotate: 90deg;
+    transition: 1.5s ease-in-out 500ms;
 }
